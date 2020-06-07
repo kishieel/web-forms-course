@@ -10,7 +10,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "uikit": "^3.5.3"
+    "uikit": "^3.5.3",
+    "uikit-react": "^3.0.20"
   },
   "scripts": {
     "start": "react-scripts start",

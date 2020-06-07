@@ -1,0 +1,27 @@
+@import "~uikit/src/scss/variables-theme.scss";
+@import "~uikit/src/scss/mixins-theme.scss";
+@import "~uikit/src/scss/uikit-theme.scss";
+
+body {
+  padding: 1em;
+}
+
+.tk-nav-item {
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        color: $global-link-color;
+      }
+    }
+}
+
+.tk-social-media {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: $global-link-color;
+  }
+}
