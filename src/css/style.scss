@@ -2,12 +2,16 @@
 @import "~uikit/src/scss/mixins-theme.scss";
 @import "~uikit/src/scss/uikit-theme.scss";
 
-.tk-dark-mode-switch {
+.tk-theme-button {
   background: inherit;
   color: inherit;
   border: none;
   outline:none;
   cursor: pointer;
+
+  &:hover {
+    color: $global-primary-background;
+  }
 }
 
 .tk-dark-mode {

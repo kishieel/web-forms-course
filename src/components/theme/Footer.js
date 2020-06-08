@@ -1,10 +1,13 @@
 import React from 'react'
+import { selectLanguageText } from '../../lang'
 
-const Footer = ( ) => {
+const Footer = ( props ) => {
+  const { lang } = props
+
   return (<>
     <footer className="uk-card uk-card-default uk-card-body uk-padding-small">
       <span>
-        Projekt i wykonanie : Tomasz Kisiel 2020
+        { selectLanguageText( lang, "footer" ) }
       </span>
       <span className="uk-align-right">
         <a className="uk-margin-remove-bottom tk-social-media"

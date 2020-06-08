@@ -14,74 +14,63 @@ import {
 } from "react-router-dom";
 
 const App = () => {
-    const [ darkMode, setDarkMode ] = useState( localStorage.getItem('darkMode') == 'true' || false )
+  const [ darkMode, setDarkMode ] = useState( localStorage.getItem('darkMode') == 'true' || true )
+  const [ language, setLanguage ] = useState( localStorage.getItem('language') || "ENG" )
 
-    const handleDarkModeChange = ( ) => {
-      setDarkMode( ! darkMode  )
-    }
+  console.log( language)
 
-    useEffect(() => {
-      localStorage.setItem('darkMode', darkMode);
-    }, [ darkMode ]);
+  const handleDarkModeChange = ( ) => {
+    setDarkMode( ! darkMode  )
+  }
 
-    return (<>
-      <Router>
-        <div className={ darkMode === true ? 'tk-dark-mode' : '' }
-          style={{ paddingTop: 30, paddingBottom: 30 }}>
-          <div className="uk-container">
-            <div className="uk-grid">
-              <div className="uk-width-1-1@m uk-margin-bottom">
-                <Header handleDarkModeChange={ handleDarkModeChange } />
-              </div>
-              <div className="uk-width-1-4@m uk-margin-bottom uk-flex-last@m">
-                <Navigation />
-              </div>
-              <div className="uk-width-3-4@m uk-margin-bottom">
-                <Switch>
-                  <Route exact={true} path="/">
-                    <FirstLesson />
-                  </Route>
-                  <Route path="/lessons/1">
-                    <FirstLesson />
-                  </Route>
-                  <Route path="/lessons/2">
-                    <SecondLesson />
-                  </Route>
-                  <Route path="/epilogue">
-                    <Epilogue />
-                  </Route>
-                  <Route path="*">
-                    <NotFound />
-                  </Route>
-                </Switch>
-              </div>
-            </div>
+  const handleLanguageChange = ( ) => {
+    setLanguage( language === "ENG" ? "PLN" : "ENG"  )
+  }
+
+  useEffect(() => {
+    localStorage.setItem('darkMode', darkMode);
+    localStorage.setItem('language', language);
+  }, [ darkMode, language ]);
+
+  return (<>
+    <Router>
+      <div className={ darkMode === true ? 'tk-dark-mode' : '' }
+        style={{ paddingTop: 30, paddingBottom: 30 }}>
+        <div className="uk-container">
+          <div className="uk-grid">
             <div className="uk-width-1-1@m uk-margin-bottom">
-              <Footer />
+              <Header handleDarkModeChange={ handleDarkModeChange } handleLanguageChange={ handleLanguageChange} lang={ language }/>
+            </div>
+            <div className="uk-width-1-4@m uk-margin-bottom uk-flex-last@m">
+              <Navigation lang={ language }/>
+            </div>
+            <div className="uk-width-3-4@m uk-margin-bottom">
+              <Switch>
+                <Route exact={true} path="/">
+                  <FirstLesson lang={ language }/>
+                </Route>
+                <Route path="/lessons/1">
+                  <FirstLesson lang={ language }/>
+                </Route>
+                <Route path="/lessons/2">
+                  <SecondLesson lang={ language }/>
+                </Route>
+                <Route path="/epilogue">
+                  <Epilogue lang={ language }/>
+                </Route>
+                <Route path="*">
+                  <NotFound lang={ language }/>
+                </Route>
+              </Switch>
             </div>
           </div>
+          <div className="uk-width-1-1@m uk-margin-bottom">
+            <Footer lang={ language }/>
+          </div>
         </div>
-      </Router>
-    </>)
+      </div>
+    </Router>
+  </>)
 }
-
-//style={{ height: 265, boxSizing: 'border-box', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '2px solid', margin: '1em', padding: '1em'}}
-
-// <a href="#" className="uk-position-fixed uk-position-bottom-center" style={{ width: 40, height: 40, borderRadius: 20, margin: 20, padding: 11, paddingTop: 14, background: '#aaa', color: '#fff' }} uk-totop="" uk-scroll=""></a>
-
-/*
-<div className="uk-grid">
-<div className="uk-width-4-5@m uk-push-1-2">
-  <div className="uk-card uk-card-default uk-card-body">
-    adsad
-  </div>
-</div>
-<div className="uk-width-1-5@m uk-pull-1-2 uk-row-first">
-  <div className="uk-card uk-card-default uk-card-body">
-  <h3 className="uk-card-title">Default</h3>
-  <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-</div>
-</div>
-*/
 
 export default App;
