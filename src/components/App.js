@@ -3,6 +3,7 @@ import Header from './theme/Header'
 import Navigation from './theme/Navigation'
 import Footer from './theme/Footer'
 import NotFound from './theme/NotFound'
+import Introduction from './lessons/Introduction'
 import Epilogue from './lessons/Epilogue'
 import FirstLesson from './lessons/FirstLesson'
 import SecondLesson from './lessons/SecondLesson'
@@ -35,9 +36,9 @@ const App = () => {
   return (<>
     <Router>
       <div className={ darkMode === true ? 'tk-dark-mode' : '' }
-        style={{ paddingTop: 30, paddingBottom: 30 }}>
+        style={{ paddingTop: 30, paddingBottom: 30, minHeight: '100vh', boxSizing: "border-box" }}>
         <div className="uk-container">
-          <div className="uk-grid">
+          <div className="uk-grid uk-grid-match">
             <div className="uk-width-1-1@m uk-margin-bottom">
               <Header handleDarkModeChange={ handleDarkModeChange } handleLanguageChange={ handleLanguageChange} lang={ language }/>
             </div>
@@ -47,7 +48,10 @@ const App = () => {
             <div className="uk-width-3-4@m uk-margin-bottom">
               <Switch>
                 <Route exact={true} path="/">
-                  <FirstLesson lang={ language }/>
+                  <Introduction lang={ language }/>
+                </Route>
+                <Route path="/introduction">
+                  <Introduction lang={ language }/>
                 </Route>
                 <Route path="/lessons/1">
                   <FirstLesson lang={ language }/>

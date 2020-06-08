@@ -10,6 +10,9 @@ const Navigation = ( props ) => {
       style={{ padding: 0, paddingTop: 15, paddingBottom: 15 }}>
       <ul className="uk-list uk-list-striped">
         <li className="tk-nav-item">
+          <Link to="/introduction">{ selectLanguageText( lang, "introduction-title" ) }</Link>
+        </li>
+        <li className="tk-nav-item">
           <Link to="/lessons/1">{ selectLanguageText( lang, "lesson-1-title" ) }</Link>
         </li>
         <li className="tk-nav-item">
@@ -27,10 +30,6 @@ const Navigation = ( props ) => {
         <li className="tk-nav-item">
           <a href="#">{ selectLanguageText( lang, "lesson-6-title" ) }</a>
         </li>
-        <li className="tk-nav-item"> <a href="#">...</a> </li>
-        <li className="tk-nav-item"> <a href="#">...</a> </li>
-        <li className="tk-nav-item"> <a href="#">...</a> </li>
-        <li className="tk-nav-item"> <a href="#">...</a> </li>
         <li className="tk-nav-item">
           <Link to="/epilogue">{ selectLanguageText( lang, "epilogue-title" ) }</Link>
         </li>

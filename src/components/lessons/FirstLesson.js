@@ -1,11 +1,17 @@
 import React from 'react'
+import { selectLanguageText } from '../../lang'
 
-const FirstLesson = () => {
+const FirstLesson = ( props ) => {
+  const { lang } = props
+
   return (<>
     <article className="uk-card uk-card-default uk-card-body">
-      <h3 className="uk-card-title">Czym są formularze?</h3>
-      <p>Lorem ipsum <a href="#">dolor</a> sit amasd sad sad asd asd sa dsad sadsad kaler asete laso a masnoa srpsa alsldsa asdlopsad ad asdsbta das saryja dsadet, conasd awd sectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <p>Lorem ipsum a masnoa srpsa alsldsa asdlopsad ad asdsbta das saryja dsadet, conasd awd sectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <h3 className="uk-card-title">{ selectLanguageText( lang, "lesson-1-title") }</h3>
+      <p>{ selectLanguageText( lang, "lesson-1-paragraph-1" ) }</p>
+      <p>{ selectLanguageText( lang, "lesson-1-paragraph-2" ) }</p>
+      <p>{ selectLanguageText( lang, "lesson-1-paragraph-3" ) }</p>
+      <div class="uk-alert-primary" uk-alert="">{ selectLanguageText( lang, "lesson-1-paragraph-4" ) }</div>
+      <p>{ selectLanguageText( lang, "lesson-1-paragraph-5" ) }</p>
       <iframe
         height="300"
         scrolling="no"
@@ -20,7 +26,7 @@ const FirstLesson = () => {
           (<a href='https://codepen.io/tomaszkisiel'>@tomaszkisiel</a>) on <a href='https://codepen.io'>CodePen</a>.
         </div>
       </iframe>
-      <p>Lorem ipsum a masnoa srpsa alsldsa asdlopsad ad asdsbta das saryja dsadet, conasd awd sectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>{ selectLanguageText( lang, "lesson-1-paragraph-6" ) }</p>
     </article>
   </>)
 }

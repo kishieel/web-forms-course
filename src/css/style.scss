@@ -31,6 +31,11 @@
       background: lighten(#2e2c2d, 3)
     }
   }
+
+  .uk-alert-primary {
+    background: #26303b;
+    color: #77bbff;
+  }
 }
 
 .tk-nav-item {
@@ -42,6 +47,10 @@
         color: $global-link-color;
       }
     }
+
+    &:last-child {
+      border-bottom: 1px solid #e5e5e5;
+    }
 }
 
 .tk-social-media {
@@ -51,6 +60,15 @@
   &:hover {
     color: $global-link-color;
   }
+}
+
+.tk-code {
+  font-family: Consolas, monospace;
+  color: $base-code-color;
+}
+
+.tk-pervert {
+  visibility: hidden;
 }
 
 ::-webkit-scrollbar {
