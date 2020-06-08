@@ -1,81 +1,67 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Header from './theme/Header'
+import Navigation from './theme/Navigation'
+import Footer from './theme/Footer'
+import NotFound from './theme/NotFound'
+import Epilogue from './lessons/Epilogue'
+import FirstLesson from './lessons/FirstLesson'
+import SecondLesson from './lessons/SecondLesson'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
-function App() {
+const App = () => {
+    const [ darkMode, setDarkMode ] = useState( localStorage.getItem('darkMode') == 'true' || false )
+
+    const handleDarkModeChange = ( ) => {
+      setDarkMode( ! darkMode  )
+    }
+
+    useEffect(() => {
+      localStorage.setItem('darkMode', darkMode);
+    }, [ darkMode ]);
+
     return (<>
-      <div className="uk-container">
-        <div className="uk-grid">
-          <div className="uk-width-1-1@m uk-margin-bottom">
-            <div className="uk-card uk-card-default uk-card-body"
-              style={{ paddingTop: 20, paddingBottom: 20 }}>
-              <div className="">
-                <h3 className="uk-card-title uk-block@s uk-inline@m uk-margin-remove-bottom">Kurs formularzy HTML</h3>
-                <a className="uk-align-right uk-margin-remove-bottom tk-social-media"
-                  href="https://linkedin.com/in/tomasz-kisiel">
-                  <span uk-icon="linkedin"></span>
-                </a>
-                <a className="uk-align-right uk-margin-remove-bottom tk-social-media"
-                  href="https://github.com/TomaszKisiel">
-                  <span uk-icon="github"></span>
-                </a>
-                <a className="uk-align-right uk-margin-remove-bottom tk-social-media"
-                  href="https://tkisiel.pl">
-                  <span uk-icon="home"></span>
-                </a>
+      <Router>
+        <div className={ darkMode === true ? 'tk-dark-mode' : '' }
+          style={{ paddingTop: 30, paddingBottom: 30 }}>
+          <div className="uk-container">
+            <div className="uk-grid">
+              <div className="uk-width-1-1@m uk-margin-bottom">
+                <Header handleDarkModeChange={ handleDarkModeChange } />
+              </div>
+              <div className="uk-width-1-4@m uk-margin-bottom uk-flex-last@m">
+                <Navigation />
+              </div>
+              <div className="uk-width-3-4@m uk-margin-bottom">
+                <Switch>
+                  <Route exact={true} path="/">
+                    <FirstLesson />
+                  </Route>
+                  <Route path="/lessons/1">
+                    <FirstLesson />
+                  </Route>
+                  <Route path="/lessons/2">
+                    <SecondLesson />
+                  </Route>
+                  <Route path="/epilogue">
+                    <Epilogue />
+                  </Route>
+                  <Route path="*">
+                    <NotFound />
+                  </Route>
+                </Switch>
               </div>
             </div>
-          </div>
-          <div className="uk-width-1-4@m uk-margin-bottom uk-flex-last@m">
-            <div className="uk-card uk-card-default uk-card-body uk-padding-remove">
-              <ul className="uk-list uk-list-striped">
-                <li className="tk-nav-item">
-                  <a href="#">Czym są formularze?</a>
-                </li>
-                <li className="tk-nav-item">
-                  <a href="#">Rodzaje formularzy.</a>
-                </li>
-                <li className="tk-nav-item">
-                  <a href="#">Jak układać formularze?</a>
-                </li>
-                <li className="tk-nav-item">
-                  <a href="#">Walidacja formularzy w HTML</a>
-                </li>
-                <li className="tk-nav-item">
-                  <a href="#">Walidacja formularzy w JS</a>
-                </li>
-                <li className="tk-nav-item">
-                  <a href="#">Formularze z Bootstrap</a>
-                </li>
-                <li className="tk-nav-item"> <a href="#">...</a> </li>
-                <li className="tk-nav-item"> <a href="#">...</a> </li>
-                <li className="tk-nav-item"> <a href="#">...</a> </li>
-                <li className="tk-nav-item"> <a href="#">...</a> </li>
-                <li className="tk-nav-item"> <a href="#">...</a> </li>
-              </ul>
-            </div>
-          </div>
-          <div className="uk-width-3-4@m uk-margin-bottom">
-            <div className="uk-card uk-card-default uk-card-body">
-              <h3 className="uk-card-title">Czym są formularze?</h3>
-              <p>Lorem ipsum <a href="#">dolor</a> sit amasd sad sad asd asd sa dsad sadsad kaler asete laso a masnoa srpsa alsldsa asdlopsad ad asdsbta das saryja dsadet, conasd awd sectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <p>Lorem ipsum a masnoa srpsa alsldsa asdlopsad ad asdsbta das saryja dsadet, conasd awd sectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <p class="codepen"
-                data-height="300"
-                data-theme-id="dark"
-                data-default-tab="html,result"
-                data-user="tomaszkisiel"
-                data-slug-hash="gOPOmXm"
-                style={{ height: 300, boxSizing: 'border-box', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '2px solid', margin: '1em', padding: '1em'}}>
-                <span>
-                  See the Pen <a href="https://codepen.io/tomaszkisiel/pen/gOPOmXm">
-                  web-forms-example-1</a> by TomaszKisiel (<a href="https://codepen.io/tomaszkisiel">@tomaszkisiel</a>)
-                  on <a href="https://codepen.io">CodePen</a>.
-                </span>
-              </p>
-              <p>Lorem ipsum a masnoa srpsa alsldsa asdlopsad ad asdsbta das saryja dsadet, conasd awd sectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div className="uk-width-1-1@m uk-margin-bottom">
+              <Footer />
             </div>
           </div>
         </div>
-      </div>
+      </Router>
     </>)
 }
 

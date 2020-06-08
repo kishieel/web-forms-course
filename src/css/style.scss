@@ -2,8 +2,31 @@
 @import "~uikit/src/scss/mixins-theme.scss";
 @import "~uikit/src/scss/uikit-theme.scss";
 
-body {
-  padding: 1em;
+.tk-dark-mode-switch {
+  background: inherit;
+  color: inherit;
+  border: none;
+  outline:none;
+  cursor: pointer;
+}
+
+.tk-dark-mode {
+  background: #222;
+
+  .uk-card {
+    background: #2e2c2d;
+    color: #fff;
+  }
+
+  .uk-card-title {
+    color: #fff;
+  }
+
+  .uk-list-striped {
+    li:nth-of-type(odd) {
+      background: lighten(#2e2c2d, 3)
+    }
+  }
 }
 
 .tk-nav-item {
@@ -24,4 +47,20 @@ body {
   &:hover {
     color: $global-link-color;
   }
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
