@@ -19,16 +19,16 @@ const Navigation = ( props ) => {
           <Link to="/lessons/2">{ selectLanguageText( lang, "lesson-2-title" ) }</Link>
         </li>
         <li className="tk-nav-item">
-          <a href="#">{ selectLanguageText( lang, "lesson-3-title" ) }</a>
+          <Link to="/lessons/3">{ selectLanguageText( lang, "lesson-3-title" ) }</Link>
         </li>
         <li className="tk-nav-item">
-          <a href="#">{ selectLanguageText( lang, "lesson-4-title" ) }</a>
+          <Link to="/lessons/4">{ selectLanguageText( lang, "lesson-4-title" ) }</Link>
         </li>
         <li className="tk-nav-item">
-          <a href="#">{ selectLanguageText( lang, "lesson-5-title" ) }</a>
+          <Link to="/lessons/5">{ selectLanguageText( lang, "lesson-5-title" ) }</Link>
         </li>
         <li className="tk-nav-item">
-          <a href="#">{ selectLanguageText( lang, "lesson-6-title" ) }</a>
+          <Link to="/lessons/6">{ selectLanguageText( lang, "lesson-6-title" ) }</Link>
         </li>
         <li className="tk-nav-item">
           <Link to="/epilogue">{ selectLanguageText( lang, "epilogue-title" ) }</Link>

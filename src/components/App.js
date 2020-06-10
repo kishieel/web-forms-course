@@ -7,6 +7,10 @@ import Introduction from './lessons/Introduction'
 import Epilogue from './lessons/Epilogue'
 import FirstLesson from './lessons/FirstLesson'
 import SecondLesson from './lessons/SecondLesson'
+import ThirdLesson from './lessons/ThirdLesson'
+import FourthLesson from './lessons/FourthLesson'
+import FifthLesson from './lessons/FifthLesson'
+import SixthLesson from './lessons/SixthLesson'
 import {
   BrowserRouter as Router,
   Switch,
@@ -58,6 +62,18 @@ const App = () => {
                 </Route>
                 <Route path="/lessons/2">
                   <SecondLesson lang={ language }/>
+                </Route>
+                <Route path="/lessons/3">
+                  <ThirdLesson lang={ language }/>
+                </Route>
+                <Route path="/lessons/4">
+                  <FourthLesson lang={ language }/>
+                </Route>
+                <Route path="/lessons/5">
+                  <FifthLesson lang={ language }/>
+                </Route>
+                <Route path="/lessons/6">
+                  <SixthLesson lang={ language }/>
                 </Route>
                 <Route path="/epilogue">
                   <Epilogue lang={ language }/>

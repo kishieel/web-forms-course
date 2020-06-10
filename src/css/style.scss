@@ -17,6 +17,13 @@
 .tk-dark-mode {
   background: #222;
 
+  .tk-input {
+    background: lighten(#2e2c2d, 3);
+    color: #fff;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+
   .uk-card {
     background: #2e2c2d;
     color: #fff;
@@ -68,7 +75,27 @@
 }
 
 .tk-pervert {
+  display: none;
   visibility: hidden;
+}
+
+.tk-input {
+  background: #fff;
+  color: $global-color;
+  border: 1px solid $global-color;
+  padding: 2px;
+}
+
+.tk-input[type="submit"],
+.tk-input[type="button"],
+.tk-input[type="reset"] {
+  cursor: pointer;
+  transition: background, color .2s ease;
+
+  &:hover {
+    background: $base-code-color;
+    color: #fff;
+  }
 }
 
 ::-webkit-scrollbar {
