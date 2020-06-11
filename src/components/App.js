@@ -18,6 +18,7 @@ import {
 } from "react-router-dom";
 
 const App = () => {
+
   const [ darkMode, setDarkMode ] = useState( localStorage.getItem('darkMode') !== "false" )
   const [ language, setLanguage ] = useState( localStorage.getItem('language') || "ENG" )
 
@@ -55,6 +56,7 @@ const App = () => {
                 <Route path="/introduction">
                   <Introduction lang={ language }/>
                 </Route>
+
                 <Route path="/lesson/1">
                   <FirstLesson lang={ language }/>
                 </Route>
