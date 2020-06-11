@@ -13,22 +13,22 @@ const Navigation = ( props ) => {
           <Link to="/introduction">{ selectLanguageText( lang, "introduction-title" ) }</Link>
         </li>
         <li className="tk-nav-item">
-          <Link to="/lessons/1">{ selectLanguageText( lang, "lesson-1-title" ) }</Link>
+          <Link to="/lesson/1">{ selectLanguageText( lang, "lesson-1-title" ) }</Link>
         </li>
         <li className="tk-nav-item">
-          <Link to="/lessons/2">{ selectLanguageText( lang, "lesson-2-title" ) }</Link>
+          <Link to="/lesson/2">{ selectLanguageText( lang, "lesson-2-title" ) }</Link>
         </li>
         <li className="tk-nav-item">
-          <Link to="/lessons/3">{ selectLanguageText( lang, "lesson-3-title" ) }</Link>
+          <Link to="/lesson/3">{ selectLanguageText( lang, "lesson-3-title" ) }</Link>
         </li>
         <li className="tk-nav-item">
-          <Link to="/lessons/4">{ selectLanguageText( lang, "lesson-4-title" ) }</Link>
+          <Link to="/lesson/4">{ selectLanguageText( lang, "lesson-4-title" ) }</Link>
         </li>
         <li className="tk-nav-item">
-          <Link to="/lessons/5">{ selectLanguageText( lang, "lesson-5-title" ) }</Link>
+          <Link to="/lesson/5">{ selectLanguageText( lang, "lesson-5-title" ) }</Link>
         </li>
         <li className="tk-nav-item">
-          <Link to="/lessons/6">{ selectLanguageText( lang, "lesson-6-title" ) }</Link>
+          <Link to="/lesson/6">{ selectLanguageText( lang, "lesson-6-title" ) }</Link>
         </li>
         <li className="tk-nav-item">
           <Link to="/epilogue">{ selectLanguageText( lang, "epilogue-title" ) }</Link>

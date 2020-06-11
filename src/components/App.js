@@ -14,17 +14,15 @@ import SixthLesson from './lessons/SixthLesson'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 const App = () => {
-  const [ darkMode, setDarkMode ] = useState( localStorage.getItem('darkMode') == 'true' || true )
+  const [ darkMode, setDarkMode ] = useState( localStorage.getItem('darkMode') !== "false" )
   const [ language, setLanguage ] = useState( localStorage.getItem('language') || "ENG" )
 
-  console.log( language)
-
   const handleDarkModeChange = ( ) => {
+    console.log( darkMode, localStorage.getItem('darkMode') )
     setDarkMode( ! darkMode  )
   }
 
@@ -57,22 +55,22 @@ const App = () => {
                 <Route path="/introduction">
                   <Introduction lang={ language }/>
                 </Route>
-                <Route path="/lessons/1">
+                <Route path="/lesson/1">
                   <FirstLesson lang={ language }/>
                 </Route>
-                <Route path="/lessons/2">
+                <Route path="/lesson/2">
                   <SecondLesson lang={ language }/>
                 </Route>
-                <Route path="/lessons/3">
+                <Route path="/lesson/3">
                   <ThirdLesson lang={ language }/>
                 </Route>
-                <Route path="/lessons/4">
+                <Route path="/lesson/4">
                   <FourthLesson lang={ language }/>
                 </Route>
-                <Route path="/lessons/5">
+                <Route path="/lesson/5">
                   <FifthLesson lang={ language }/>
                 </Route>
-                <Route path="/lessons/6">
+                <Route path="/lesson/6">
                   <SixthLesson lang={ language }/>
                 </Route>
                 <Route path="/epilogue">
