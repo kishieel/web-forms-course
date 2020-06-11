@@ -7,155 +7,245 @@ const SecondLesson = ( props ) => {
   return (<>
     <article className="uk-card uk-card-default uk-card-body">
       <h3 className="uk-card-title">{ selectLanguageText( lang, "lesson-2-title") }</h3>
-      <p>Jak wspomniałem w poprzednim rozdziale największą siłą formularzy są tak zwane kontrolki, które w języku HTML reprezentuje element <span className="tk-code">&lt;input&gt;</span>. Może on decydować jakiego typu dane są dopuszczalne i w jaki sposób należy je formatować - w tym celu używa atrybutu <span className="tk-code">type</span>.</p>
       <p>
-        Wartości, które przyjmuje ten atrybut możesz znaleźć poniżej:
+        { selectLanguageText( lang, "lesson-2-paragraph-1-1") }
+        <span className="tk-code"> &lt;input&gt; </span>
+        { selectLanguageText( lang, "lesson-2-paragraph-1-2") }
+        <span className="tk-code"> type</span>.
+      </p>
+      <p>
+        { selectLanguageText( lang, "lesson-2-paragraph-2-1") }
         <ul className="uk-list uk-list-hyphen">
           <li>
-            <span className="tk-code">text</span> &ndash; pozwala na wporwadzenie dowolnego ciągu znaków - liczb, liter i znaków specjalnych.<br/>
+            <span className="tk-code">text</span> &ndash;
+            { selectLanguageText( lang, "lesson-2-paragraph-2-2") }
             <form className="uk-overflow-hidden">
-              <label for="textInput">Napisz mi coś ciekawego. </label>
+              <label for="textInput">
+                { selectLanguageText( lang, "lesson-2-paragraph-2-3") }
+              </label>
               <input id="textInput" className="tk-input uk-align-right uk-margin-remove-bottom" type="text" style={{ maxWidth: '100%' }} name="fname" autofocus/>
             </form>
           </li>
           <li>
-            <span className="tk-code">number</span> &ndash; umożliwia wprowadzenie dowolnego ciągu liczb.<br/>
+            <span className="tk-code">number</span> &ndash;
+            { selectLanguageText( lang, "lesson-2-paragraph-2-4") }
             <form className="uk-overflow-hidden">
-              <label for="numberInput">Jaka liczba jest twoją ulubioną? </label>
+              <label for="numberInput">
+              { selectLanguageText( lang, "lesson-2-paragraph-2-5") }
+              </label>
               <input id="numberInput" className="tk-input uk-align-right uk-margin-remove-bottom" type="number" style={{ maxWidth: '100%' }}/>
             </form>
           </li>
           <li>
-            <span className="tk-code">email</span> &ndash; wymaga wpisania poprawnego składniowo adresu email.<br/>
+            <span className="tk-code">email</span> &ndash;
+            { selectLanguageText( lang, "lesson-2-paragraph-2-6") }
             <form className="uk-overflow-hidden">
-              <label for="emailInput">Może wyglada jak zwykłe pole tekstowe, ale żeby zatwierdzić formularz z nim musisz podać prawidłowy email: </label>
+              <label for="emailInput">
+              { selectLanguageText( lang, "lesson-2-paragraph-2-7") }
+              </label>
               <input id="emailInput" className="tk-input uk-align-right uk-margin-remove-bottom" type="email" required/>
               <input id="emailSubmitInput" className="tk-input uk-align-right uk-margin-remove-bottom" type="submit" style={{ paddingLeft: 10, paddingRight: 10, maxWidth: '100%' }} value="Sprawdź!"/>
             </form>
           </li>
           <li>
-            <span className="tk-code">password</span> &ndash; umożliwia wprowadzanie tekstu, który zostanie ukryt pod znakami gwiazdki (*), aby utrudnić jego odczytanie.<br/>
+            <span className="tk-code">password</span> &ndash;
+            { selectLanguageText( lang, "lesson-2-paragraph-2-8") }
+            <br/>
             <form className="uk-overflow-hidden">
               <label for="passwordInput">Twoje słowa zostaną ukryte przed potencjalnymi podglądaczami<span className="tk-pervert"> - jak ja</span>. </label>
               <input id="passwordInput" className="tk-input uk-align-right" type="password" style={{ maxWidth: '100%' }}/>
             </form>
           </li>
           <li>
-            <span className="tk-code">radio</span> &ndash; definiuje listę wyboru pozwalającą wybrać tylko jeden element.<br/>
+            <span className="tk-code">radio</span> &ndash;
+            { selectLanguageText( lang, "lesson-2-paragraph-2-radio-desc-1" ) }
+            <br/>
             <form className="uk-overflow-hidden">
-              Możesz wybrać tylko jedną opcje<span className="tk-pervert"> - no.. chyba że jesteś sprytny i wiesz jak to obejść</span>: <br/>
-              <input id="radioMaleInput" className="uk-radio" name="gender" type="radio" /><label for="radioMaleInput" style={{ paddingLeft: 10 }} >Chłopczyk</label><br/>
-              <input id="radioFemaleInput" className="uk-radio" name="gender" type="radio" /><label for="radioFemaleInput" style={{ paddingLeft: 10 }} >Dziewczynka</label><br/>
-              <input id="radioOtherInput" className="uk-radio" name="gender" type="radio" /><label for="radioOtherInput" style={{ paddingLeft: 10 }} >I tak cię lubię<span className="tk-pervert"> - mimo, iż zrobiłeś ze swoim ciałem coś dziwnego</span>&nbsp;:3</label><br/>
+              { selectLanguageText( lang, "lesson-2-paragraph-2-radio-desc-2-1" ) }
+              <span className="tk-pervert">
+                { selectLanguageText( lang, "lesson-2-paragraph-2-radio-desc-2-2" ) }
+              </span>: <br/>
+              <input id="radioMaleInput" className="uk-radio" name="gender" type="radio" /><label for="radioMaleInput" style={{ paddingLeft: 10 }} >
+                { selectLanguageText( lang, "lesson-2-paragraph-2-radio-opt-1" ) }
+              </label><br/>
+              <input id="radioFemaleInput" className="uk-radio" name="gender" type="radio" /><label for="radioFemaleInput" style={{ paddingLeft: 10 }} >
+                { selectLanguageText( lang, "lesson-2-paragraph-2-radio-opt-2" ) }
+              </label><br/>
+              <input id="radioOtherInput" className="uk-radio" name="gender" type="radio" /><label for="radioOtherInput" style={{ paddingLeft: 10 }} >
+                { selectLanguageText( lang, "lesson-2-paragraph-2-radio-opt-3-1" ) }
+                <span className="tk-pervert">
+                  { selectLanguageText( lang, "lesson-2-paragraph-2-radio-opt-3-2" ) }
+                </span>&nbsp;:3
+              </label><br/>
             </form>
           </li>
           <li>
-            <span className="tk-code">checkbox</span> &ndash; tworzy listę wyboru pozwalającą wybrać dowolną ilość elementów.<br/>
+            <span className="tk-code">checkbox</span> &ndash;
+            { selectLanguageText( lang, "lesson-2-paragraph-2-checkbox-1" ) }
+            <br/>
             <form className="uk-overflow-hidden">
-              Możesz wybrać dowolną liczbę opcji: <br/>
-              <input id="checkboxAppleInput" className="uk-checkbox" name="apple" type="checkbox" /><label for="radioMaleInput" style={{ paddingLeft: 10 }} >Jabłko</label><br/>
-              <input id="checkboxCarrotInput" className="uk-checkbox" name="carrot" type="checkbox" /><label for="radioFemaleInput" style={{ paddingLeft: 10 }} >Marcheweczka</label><br/>
-              <input id="checkboxParslayInput" className="uk-checkbox" name="parsley" type="checkbox" /><label for="radioOtherInput" style={{ paddingLeft: 10 }} >Pietrucha</label><br/>
+              { selectLanguageText( lang, "lesson-2-paragraph-2-checkbox-2" ) }
+              <input id="checkboxAppleInput" className="uk-checkbox" name="apple" type="checkbox" /><label for="radioMaleInput" style={{ paddingLeft: 10 }} >
+                { selectLanguageText( lang, "lesson-2-paragraph-2-checkbox-opt-1" ) }
+              </label><br/>
+              <input id="checkboxCarrotInput" className="uk-checkbox" name="carrot" type="checkbox" /><label for="radioFemaleInput" style={{ paddingLeft: 10 }} >
+                { selectLanguageText( lang, "lesson-2-paragraph-2-checkbox-opt-2" ) }
+              </label><br/>
+              <input id="checkboxParslayInput" className="uk-checkbox" name="parsley" type="checkbox" /><label for="radioOtherInput" style={{ paddingLeft: 10 }} >
+                { selectLanguageText( lang, "lesson-2-paragraph-2-checkbox-opt-3" ) }
+              </label><br/>
             </form>
           </li>
           <li>
-            <span className="tk-code">button</span> &ndash; tworzy przycisk, który nie posiada przypisanej akcji.<br/>
+            <span className="tk-code">button</span> &ndash;
+            { selectLanguageText( lang, "lesson-2-paragraph-2-button-1" ) }
             <form className="uk-overflow-hidden">
-              Klikaj dowoli - i tak nic się nie stanie:
-              <input className="tk-input uk-align-right uk-margin-remove-bottom" type="button" style={{ maxWidth: '100%', paddingLeft: 10, paddingRight: 10 }} value="Kliknij sobie!"/>
+              { selectLanguageText( lang, "lesson-2-paragraph-2-button-2" ) }
+              <input className="tk-input uk-align-right uk-margin-remove-bottom" type="button" style={{ maxWidth: '100%', paddingLeft: 10, paddingRight: 10 }} value={ selectLanguageText( lang, "lesson-2-paragraph-2-button-3" ) }/>
             </form>
           </li>
           <li>
-            <span className="tk-code">submit</span> &ndash; zatwierdza formularza i przekazuje go do określonego kontrolera odpowiedzialnego za jego przetworzenie.<br/>
+            <span className="tk-code">submit</span> &ndash;
+            { selectLanguageText( lang, "lesson-2-paragraph-2-submit-1" ) }
+            <br/>
             <form className="uk-overflow-hidden">
-              Naciśnięcie spowoduje przesłanie formularza i przeładowanie strony:
-              <input className="tk-input uk-align-right uk-margin-remove-bottom" type="submit" style={{ maxWidth: '100%', paddingLeft: 10, paddingRight: 10 }} value="Prześlij!"/>
+              <span>{ selectLanguageText( lang, "lesson-2-paragraph-2-submit-2" ) }</span>
+              <input className="tk-input uk-align-right uk-margin-remove-bottom"
+                type="submit"
+                style={{ maxWidth: '100%', paddingLeft: 10, paddingRight: 10 }}
+                value={ selectLanguageText( lang, "lesson-2-paragraph-2-submit-3" ) }/>
             </form>
           </li>
           <li>
-            <span className="tk-code">reset</span> &ndash; przywraca wszystkie pola formularza do ich początkowej wartości.<br/>
+            <span className="tk-code">reset</span> &ndash;
+            { selectLanguageText( lang, "lesson-2-paragraph-2-reset-1" ) }
             <form className="uk-overflow-hidden">
-              Ten przycisk pozwala wyczyścić formularz:
-              <input className="tk-input uk-align-right uk-margin-remove-bottom" type="text" placeholder="Najpierw to coś tu wpisz.."/>
-              <input className="tk-input uk-align-right uk-margin-remove-bottom" type="reset" style={{ maxWidth: '100%', paddingLeft: 10, paddingRight: 10 }} value="Wyczyść!"/>
+              <span>{ selectLanguageText( lang, "lesson-2-paragraph-2-reset-2" ) }</span>
+              <input className="tk-input uk-align-right uk-margin-remove-bottom"
+                type="text"
+                placeholder={ selectLanguageText( lang, "lesson-2-paragraph-2-reset-3" ) }/>
+              <input className="tk-input uk-align-right uk-margin-remove-bottom"
+                type="reset"
+                style={{ maxWidth: '100%', paddingLeft: 10, paddingRight: 10 }}
+                value={ selectLanguageText( lang, "lesson-2-paragraph-2-reset-4" ) }/>
             </form>
           </li>
           <li>
-            <span className="tk-code">color</span> &ndash; pozwala wybrać kolor za pomocą menu kontekstowego.
+            <span className="tk-code">color</span> &ndash;
+            { selectLanguageText( lang, "lesson-2-paragraph-2-color" ) }
             <form className="uk-overflow-hidden">
               <input className="tk-input uk-align-right uk-margin-remove-bottom" type="color" style={{ padding: 0, maxWidth: '100%' }}/>
             </form>
           </li>
           <li>
-            <span className="tk-code">date</span> &ndash; dopuszcza wprowadzenie jedynie daty w formacie zdefiniowanym przez przeglądarkę.
+            <span className="tk-code">date</span> &ndash;
+            { selectLanguageText( lang, "lesson-2-paragraph-2-date-1" ) }
             <form className="uk-overflow-hidden">
-              <label for="dateInput">Jaki rok jest twoim ulubionym?</label>
+              <label for="dateInput">
+                { selectLanguageText( lang, "lesson-2-paragraph-2-date-2" ) }
+              </label>
               <input id="dateInput" className="tk-input uk-align-right uk-margin-remove-bottom" type="date" style={{ maxWidth: '100%' }}/>
             </form>
           </li>
           <li>
-            <span className="tk-code">time</span> &ndash; pozwala na wprowadzenie czasu w formacie zdefiniowanym przez przeglądarkę.
+            <span className="tk-code">time</span> &ndash;
+            { selectLanguageText( lang, "lesson-2-paragraph-2-time-1" ) }
             <form className="uk-overflow-hidden">
-              <label for="timeInput">Kiedy się spotkamy?</label>
+              <label for="timeInput">
+                { selectLanguageText( lang, "lesson-2-paragraph-2-time-2" ) }
+              </label>
               <input id="timeInput" className="tk-input uk-align-right uk-margin-remove-bottom" type="time" style={{ maxWidth: '100%' }}/>
             </form>
           </li>
           <li>
-            <span className="tk-code">datetime-local</span> &ndash; umożliwia jednoczesne wprowadzenie daty i czasu w formacie określonym przez przeglądarkę.
+            <span className="tk-code">datetime-local</span> &ndash;
+            { selectLanguageText( lang, "lesson-2-paragraph-2-date-time-1" ) }
             <form className="uk-overflow-hidden">
-              <label for="datetimeInput">Wybierz dogodny dla siebie termin spotkania.</label>
+              <label for="datetimeInput">
+                { selectLanguageText( lang, "lesson-2-paragraph-2-date-time-2" ) }
+              </label>
               <input id="datetimeInput" className="tk-input uk-align-right uk-margin-remove-bottom" type="datetime-local" style={{ maxWidth: '100%' }} />
             </form>
           </li>
           <li>
-            <span className="tk-code">month</span> &ndash; pozwala na wprowadzenie miesiąca wybranego roku.
+            <span className="tk-code">month</span> &ndash;
+            { selectLanguageText( lang, "lesson-2-paragraph-2-month-1" ) }
             <form className="uk-overflow-hidden">
-              <label for="monthInput">W którym miesiącu sie urodziłeś?</label>
+              <label for="monthInput">
+                { selectLanguageText( lang, "lesson-2-paragraph-2-month-1" ) }
+              </label>
               <input id="monthInput" className="tk-input uk-align-right uk-margin-remove-bottom" type="month" style={{ maxWidth: '100%' }}/>
             </form>
           </li>
           <li>
-            <span className="tk-code">week</span> &ndash; umożliwia wprowadzenie tygodnia wybranego roku.
+            <span className="tk-code">week</span> &ndash;
+            { selectLanguageText( lang, "lesson-2-paragraph-2-week-1" ) }
             <form className="uk-overflow-hidden">
-              <label for="weekInput">A czy wiesz który to był tydzień?</label>
+              <label for="weekInput">
+                { selectLanguageText( lang, "lesson-2-paragraph-2-week-2" ) }
+              </label>
               <input id="weekInput" className="tk-input uk-align-right uk-margin-remove-bottom" type="week" style={{ maxWidth: '100%' }}/>
             </form>
           </li>
           <li>
-            <span className="tk-code">file</span> &ndash; tworzy kontroler, któremu możemy przekazać dowolny plik z naszego komputera - po jego naciśnieciu otworzy się menu kontekstowe umożliwiające wybór pliku.
+            <span className="tk-code">file</span> &ndash;
+            { selectLanguageText( lang, "lesson-2-paragraph-2-file" ) }
           </li>
           <li>
-            <span className="tk-code">range</span> &ndash; domyślnie pozwala wybrać wartości na skali od 0 do 100.
+            <span className="tk-code">range</span> &ndash;
+            { selectLanguageText( lang, "lesson-2-paragraph-2-range-1" ) }
             <form className="uk-overflow-hidden">
-              <label for="weekInput">Jak oceniasz skalę swojego cierpienia<span className="tk-pervert"> - nie.. nie możesz wyjść poza skale</span> ?</label>
+              <label for="weekInput">
+                { selectLanguageText( lang, "lesson-2-paragraph-2-range-2" ) }
+                <span className="tk-pervert">
+                  { selectLanguageText( lang, "lesson-2-paragraph-2-range-3" ) }
+                </span>?</label>
               <input id="rangeInput" className="uk-range uk-align-right uk-margin-remove-bottom" style={{ width: 200, maxWidth: '100%', paddingTop: 10, paddingBottom: 10 }} type="range" />
             </form>
           </li>
           <li>
-            <span className="tk-code">search</span> &ndash; zwyczajowo używany w polu, które ma służyć wyszukiwaniu treści na stronie, nie posiada żadnych specyficznych właściwości i zachowuje się jak pole tekstowe.
+            <span className="tk-code">search</span> &ndash;
+            { selectLanguageText( lang, "lesson-2-paragraph-2-search" ) }
           </li>
           <li>
-            <span className="tk-code">tel</span> &ndash; zwyczajowo używany w polu przeznaczonym na numer telefonu, nie posiada żadnych specyficznych właściwości i zachowuje się jak pole tekstowe.
+            <span className="tk-code">tel</span> &ndash;
+            { selectLanguageText( lang, "lesson-2-paragraph-2-tel" ) }
           </li>
           <li>
-            <span className="tk-code">url</span> &ndash; wymaga wpisania poprawnego składniowo adresu url.
+            <span className="tk-code">url</span> &ndash;
+            { selectLanguageText( lang, "lesson-2-paragraph-2-url-1" ) }
             <form className="uk-overflow-hidden" onSubmit={ (e) => { e.preventDefault(); return false; } }>
-              <label for="urlInput">Podaj adres swojej ulibionej strony internetowej<span className="tk-pervert"> - eghem... legalnej strony internetowej</span>. </label>
+              <label for="urlInput">
+                { selectLanguageText( lang, "lesson-2-paragraph-2-url-2" ) }
+                <span className="tk-pervert">
+                  { selectLanguageText( lang, "lesson-2-paragraph-2-url-3" ) }
+                </span>.
+              </label>
               <input id="urlInput" className="tk-input uk-align-right uk-margin-remove-bottom" type="url" required/>
-              <input id="urlSubmitInput" className="tk-input uk-align-right uk-margin-remove-bottom" type="submit" style={{ paddingLeft: 10, paddingRight: 10, maxWidth: '100%' }} value="Sprawdź!"/>
+              <input id="urlSubmitInput"
+                className="tk-input uk-align-right uk-margin-remove-bottom"
+                type="submit"
+                style={{ paddingLeft: 10, paddingRight: 10, maxWidth: '100%' }}
+                value={ selectLanguageText( lang, "lesson-2-paragraph-2-url-4" ) } />
             </form>
           </li>
           <li>
-            <span className="tk-code">hidden</span> &ndash; pozwala na stworzenie ukrytego pola tekstowego, niewidocznego w przeglądarce.
+            <span className="tk-code">hidden</span> &ndash;
+            { selectLanguageText( lang, "lesson-2-paragraph-2-hidden-1" ) }
             <form className="uk-overflow-hidden">
-              <label for="hiddenInput">Teraz mnie widzisz.. a teraz nie!</label>
+              <label for="hiddenInput">
+                { selectLanguageText( lang, "lesson-2-paragraph-2-hidden-2" ) }
+              </label>
               <input id="hiddenInput" className="tk-input uk-align-right uk-margin-remove-bottom" type="hidden"/>
             </form>
           </li>
         </ul>
       </p>
       <p>
-        Jeżeli ponownie zaniemówiłeś onieśmielony ilością wartości jakie może przyjąć atrybut <span className="tk-code">type</span> - spokojnie! Ten atrybut nie jest jedynym atrybutem tagu <span className="tk-code">&lt;input&gt;</span>.
+        { selectLanguageText( lang, "lesson-2-paragraph-3-1" ) }
+        <span className="tk-code">type</span>
+        { selectLanguageText( lang, "lesson-2-paragraph-3-2" ) }
+        <span className="tk-code">&lt;input&gt;</span>.
       </p>
       <p>
         Innymi ciekawymi<span className="tk-pervert">, jak spływ wody w klozecie,</span> atrybutami są:
