@@ -22,6 +22,7 @@ const App = () => {
   const [ darkMode, setDarkMode ] = useState( localStorage.getItem('darkMode') !== "false" )
 
   const handleDarkModeChange = ( ) => {
+    console.log( darkMode, localStorage.getItem('darkMode') )
     setDarkMode( ! darkMode  )
   }
 
@@ -49,7 +50,6 @@ const App = () => {
                 <Route path="/introduction">
                   <Introduction />
                 </Route>
-
                 <Route path="/lesson/1">
                   <FirstLesson />
                 </Route>
@@ -67,7 +67,6 @@ const App = () => {
                 </Route>
                 <Route path="/lesson/6">
                   <SixthLesson />
-                </Route>
                 <Route path="/epilogue">
                   <Epilogue />
                 </Route>
