@@ -1,15 +1,11 @@
 import React from 'react'
 import { selectLanguageText } from '../../lang'
 
-const Footer = ( props ) => {
-  const { lang } = props
-
+const Footer = ( ) => {
   return (<>
     <footer className="uk-card uk-card-default uk-card-body uk-padding-medium"
       style={{ paddingTop: 20, paddingBottom: 20 }}>
-      <span>
-        { selectLanguageText( lang, "footer" ) }
-      </span>
+      <span>Projekt i wykonanie : Tomasz Kisiel 2020</span>
       <span className="uk-align-right">
         <a className="uk-margin-remove-bottom tk-social-media"
           href="https://tkisiel.pl">

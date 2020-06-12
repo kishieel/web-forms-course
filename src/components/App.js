@@ -20,21 +20,14 @@ import {
 const App = () => {
 
   const [ darkMode, setDarkMode ] = useState( localStorage.getItem('darkMode') !== "false" )
-  const [ language, setLanguage ] = useState( localStorage.getItem('language') || "ENG" )
 
   const handleDarkModeChange = ( ) => {
-    console.log( darkMode, localStorage.getItem('darkMode') )
     setDarkMode( ! darkMode  )
-  }
-
-  const handleLanguageChange = ( ) => {
-    setLanguage( language === "ENG" ? "PLN" : "ENG"  )
   }
 
   useEffect(() => {
     localStorage.setItem('darkMode', darkMode);
-    localStorage.setItem('language', language);
-  }, [ darkMode, language ]);
+  }, [ darkMode ]);
 
   return (<>
     <Router>
@@ -43,49 +36,49 @@ const App = () => {
         <div className="uk-container">
           <div className="uk-grid uk-grid-match">
             <div className="uk-width-1-1@m uk-margin-bottom">
-              <Header handleDarkModeChange={ handleDarkModeChange } handleLanguageChange={ handleLanguageChange} lang={ language }/>
+              <Header handleDarkModeChange={ handleDarkModeChange } />
             </div>
             <div className="uk-width-1-4@m uk-margin-bottom uk-flex-last@m">
-              <Navigation lang={ language }/>
+              <Navigation />
             </div>
             <div className="uk-width-3-4@m uk-margin-bottom">
               <Switch>
                 <Route exact={true} path="/">
-                  <Introduction lang={ language }/>
+                  <Introduction />
                 </Route>
                 <Route path="/introduction">
-                  <Introduction lang={ language }/>
+                  <Introduction />
                 </Route>
 
                 <Route path="/lesson/1">
-                  <FirstLesson lang={ language }/>
+                  <FirstLesson />
                 </Route>
                 <Route path="/lesson/2">
-                  <SecondLesson lang={ language }/>
+                  <SecondLesson />
                 </Route>
                 <Route path="/lesson/3">
-                  <ThirdLesson lang={ language }/>
+                  <ThirdLesson />
                 </Route>
                 <Route path="/lesson/4">
-                  <FourthLesson lang={ language }/>
+                  <FourthLesson />
                 </Route>
                 <Route path="/lesson/5">
-                  <FifthLesson lang={ language }/>
+                  <FifthLesson />
                 </Route>
                 <Route path="/lesson/6">
-                  <SixthLesson lang={ language }/>
+                  <SixthLesson />
                 </Route>
                 <Route path="/epilogue">
-                  <Epilogue lang={ language }/>
+                  <Epilogue />
                 </Route>
                 <Route path="*">
-                  <NotFound lang={ language }/>
+                  <NotFound />
                 </Route>
               </Switch>
             </div>
           </div>
           <div className="uk-width-1-1@m uk-margin-bottom">
-            <Footer lang={ language }/>
+            <Footer />
           </div>
         </div>
       </div>
