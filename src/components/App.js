@@ -67,6 +67,7 @@ const App = () => {
                 </Route>
                 <Route path="/lesson/6">
                   <SixthLesson />
+                </Route>
                 <Route path="/epilogue">
                   <Epilogue />
                 </Route>
