@@ -2,36 +2,37 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import { selectLanguageText } from '../../lang'
 
-const Navigation = ( props ) => {
-  const { lang } = props
-
+const Navigation = ( ) => {
   return (<>
     <nav className="uk-card uk-card-default uk-card-body"
       style={{ padding: 0, paddingTop: 15, paddingBottom: 15 }}>
       <ul className="uk-list uk-list-striped">
         <li className="tk-nav-item">
-          <Link to="/introduction">{ selectLanguageText( lang, "introduction-title" ) }</Link>
+          <Link to="/introduction">Instrukcja obsługi.</Link>
         </li>
         <li className="tk-nav-item">
-          <Link to="/lesson/1">{ selectLanguageText( lang, "lesson-1-title" ) }</Link>
+          <Link to="/lesson/what-are-forms">Czym są formularze?</Link>
         </li>
         <li className="tk-nav-item">
-          <Link to="/lesson/2">{ selectLanguageText( lang, "lesson-2-title" ) }</Link>
+          <Link to="/lesson/form-elements">Elementy formularza.</Link>
         </li>
         <li className="tk-nav-item">
-          <Link to="/lesson/3">{ selectLanguageText( lang, "lesson-3-title" ) }</Link>
+          <Link to="/lesson/input-types">Rodzaje znacznika input.</Link>
         </li>
         <li className="tk-nav-item">
-          <Link to="/lesson/4">{ selectLanguageText( lang, "lesson-4-title" ) }</Link>
+          <Link to="/lesson/4">Jak układać formularze?</Link>
         </li>
         <li className="tk-nav-item">
-          <Link to="/lesson/5">{ selectLanguageText( lang, "lesson-5-title" ) }</Link>
+          <Link to="/lesson/5">Walidacja formularzy w HTML.</Link>
         </li>
         <li className="tk-nav-item">
-          <Link to="/lesson/6">{ selectLanguageText( lang, "lesson-6-title" ) }</Link>
+          <Link to="/lesson/6">Walidacja formularzy w JS.</Link>
         </li>
         <li className="tk-nav-item">
-          <Link to="/epilogue">{ selectLanguageText( lang, "epilogue-title" ) }</Link>
+          <Link to="/lesson/7">Formularze z Bootstrap.</Link>
+        </li>
+        <li className="tk-nav-item">
+          <Link to="/epilogue">Słowo zakończenia.</Link>
         </li>
       </ul>
     </nav>

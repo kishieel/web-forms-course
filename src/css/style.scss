@@ -13,6 +13,7 @@
     color: $global-primary-background;
   }
 }
+$abc : #222;
 
 .tk-dark-mode {
   background: #222;
@@ -29,6 +30,7 @@
     color: #fff;
   }
 
+  h1, h2, h3, h4, h5, h6,
   .uk-card-title {
     color: #fff;
   }
@@ -42,6 +44,19 @@
   .uk-alert-primary {
     background: #26303b;
     color: #77bbff;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: inherit;
+    }
+  }
+
+  .uk-alert-danger {
+    background: #49252c;
+    color: #fef4f6;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: inherit;
+    }
   }
 }
 
