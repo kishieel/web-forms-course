@@ -1,12 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PageSwitcher from '../theme/PageSwitcher'
 
 const Introduction = () => {
+  const { exampleAlert, setExampleAlert } = useState( false )
+
   return (<>
     <article className="uk-card uk-card-default uk-card-body">
       <h3 className="uk-card-title">Instrukcja obsługi</h3>
       <p>Witaj w kursie formularzy HTML! Nie wiem kim jesteś i skąd się tu wziąłeś<span className="tk-pervert"> tzn. wiem, wszyscy przyśliśmy na świat w podobnych okolicznościach, ale to nie istotne</span>, skoro jednak już tu jesteś to zanim zaczniesz korzystać z następnych lekcji chciałbym Ci dać kilka porad odnośnie tego co jest czym i co jak działa, abyś mógł jak najszybciej nauczyć się wszysktkiego co związane jest z formularzami.</p>
-      <p>Oprócz standardowych opisów na kolejnych stronach kursu możesz znaleźć wbodowane elementy prezentujące opisane funkcjonalności oraz okienka takie jak to poniżej - przyjżyj się mu uważnie!</p>
+      <p>Oprócz standardowych opisów, na kolejnych stronach kursu możesz znaleźć wbodowane elementy prezentujące opisane funkcjonalności oraz okienka takie jak to poniżej - przyjżyj się im uważnie!</p>
+      <div className="uk-margin-bottom">
+        <div className="uk-text-center uk-margin-bottom">
+          <button class="uk-button uk-button-primary">Element wbudowany - klikaj śmiało!</button>
+        </div>
+        <div>
+          <div class="uk-alert-primary" uk-alert="">
+            <a class="uk-alert-close" uk-close=""></a>
+            <h3>Ucz się, ucz!</h3>
+            <p>Wiedza to potęgi klucz, a kto kluczy ma wiele ten zostaje w szkole woźnym.</p>
+          </div>
+        </div>
+      </div>
       <iframe
         height="300"
         scrolling="no"
