@@ -1,13 +1,11 @@
 import React from 'react'
-import { selectLanguageText } from '../../lang'
+import PageSwitcher from '../theme/PageSwitcher'
 
-const SecondLesson = ( props ) => {
-  const { lang } = props
-
+const SecondLesson = ( ) => {
   return (<>
     <article className="uk-card uk-card-default uk-card-body">
-      <h3 className="uk-card-title">{ selectLanguageText( lang, "lesson-2-title") }</h3>
-      <p>Jak wspomniałem w poprzednim rozdziale największą siłą formularzy są tak zwane kontrolki, które w języku HTML reprezentuje element <span className="tk-code">&lt;input&gt;</span>. Może on decydować jakiego typu dane są dopuszczalne i w jaki sposób należy je formatować - w tym celu używa atrybutu <span className="tk-code">type</span>.</p>
+      <h3 className="uk-card-title">Rodzaje kontrolek</h3>
+      <p>Jak wspomniałem w poprzednim rozdziale największą siłą formularzy są tak zwane kontrolki, które w języku HTML reprezentują znaczniki <span className="tk-code"> &lt;input&gt;</span>,<span className="tk-code"> &lt;select&gt; </span> i <span className="tk-code"> &lt;textarea&gt; </span>. Może on decydować jakiego typu dane są dopuszczalne i w jaki sposób należy je formatować - w tym celu używa atrybutu <span className="tk-code">type</span>.</p>
       <p>
         Wartości, które przyjmuje ten atrybut możesz znaleźć poniżej:
         <ul className="uk-list uk-list-hyphen">
@@ -161,6 +159,12 @@ const SecondLesson = ( props ) => {
         Innymi ciekawymi<span className="tk-pervert">, jak spływ wody w klozecie,</span> atrybutami są:
         <ul className="uk-list uk-list-hyphen">
           <li>
+            <span className="tk-code">value</span> &ndash; pozwala na określenie początkowej wartości pola.
+          </li>
+          <li>
+            <span className="tk-code">name</span> &ndash; określa nazwę pola, niezbędną do przesłania wartości pola w formularzu.
+          </li>
+          <li>
             <span className="tk-code">rideonly</span> &ndash; sprawia, że dane zawarte w określonym polu są tylko do odczytu i nie można ich edytować.
           </li>
           <li>
@@ -194,7 +198,7 @@ const SecondLesson = ( props ) => {
             <span className="tk-code">autofocus</span> &ndash; automatycznie zaznacza określone pole gdy strona zostaje przeładowana. Tego atrybutu powinniśmy użyć tylko raz.
           </li>
           <li>
-            <span className="tk-code">autocomplete</span> &ndash;
+            <span className="tk-code">autocomplete</span> &ndash; określa, czy pole wejściowe powinno mieć włączone autouzupełnianie.
           </li>
         </ul>
       </p>
@@ -219,6 +223,8 @@ const SecondLesson = ( props ) => {
         <h3>ZADANIE BOJOWE !!!</h3>
         <p>Korzystając ze zdobytych w tej lekcji informacji spróbuj stworzyć formularz wykorzystujący wszyskie kontrolki, oraz ich atrybuty. Dodatkowe informacje na temat znacznika <span className="tk-code">&lt;input&gt;</span> możesz znaleźć <a className="uk-link" href="https://www.w3schools.com/html/html_form_input_types.asp">tutaj</a>. Bądź kreatywny - powodzenia!</p>
       </div>
+      <PageSwitcher previousURL="/lesson/1" previousText="Czym są formularze?"
+        nextURL="/lesson/3" nextText="Jak układać formularze?"/>
     </article>
   </>)
 }

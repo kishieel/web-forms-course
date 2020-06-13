@@ -1,9 +1,7 @@
 import React from 'react'
-import { selectLanguageText } from '../../lang'
+import PageSwitcher from '../theme/PageSwitcher'
 
-const FirstLesson = ( props ) => {
-  const { lang } = props
-
+const FirstLesson = ( ) => {
   return (<>
     <article className="uk-card uk-card-default uk-card-body">
       <h3 className="uk-card-title">Czym są formularze?</h3>
@@ -39,11 +37,12 @@ const FirstLesson = ( props ) => {
           (<a href='https://codepen.io/tomaszkisiel'>@tomaszkisiel</a>) on <a href='https://codepen.io'>CodePen</a>.
         </div>
       </iframe>
-      <p>Jak sam widzisz formularz nie jest czymś nazbyt ciekawym. Zdecydowanie ciekawsze są jego różnorakie kontrolki ukryte pod znacznikiem <span className="tk-code">&lt;input&gt;</span>, które umożliwiają wprowadzenie danych wybranego typu. Jeżeli przeraża cię ilość którą zobaczyłeś w tym pinie.. nie martw się - w następnej zakładce będzie więcej&nbsp;:P</p>
+      <p>Jak sam widzisz formularz nie jest czymś nazbyt ciekawym. Zdecydowanie ciekawsze są jego różnorakie kontrolki ukryte pod znacznikami <span className="tk-code">&lt;input&gt;</span>,  <span className="tk-code">&lt;select&gt;</span> czy <span className="tk-code">&lt;textarea&gt;</span>, które umożliwiają wprowadzenie danych wybranego typu. Jeżeli przeraża cię ilość którą zobaczyłeś w tym pinie.. nie martw się - w następnej zakładce będzie więcej&nbsp;:P</p>
       <div className="uk-alert-primary" uk-alert="">
         <h3>ZADANIE BOJOWE !!!</h3>
         <p>Przed przeczytaniem następnego rozdziału, przypomnij sobie z jakimi formularzami spotkałeś się do tej pory w internecie oraz jakie dane można było w nich wprawdzać - powodzenia!</p>
       </div>
+      <PageSwitcher previousURL="/introduction" previousText="Instrukcja obsługi" nextURL="/lesson/form-elements" nextText="Elementy formularza" />
     </article>
   </>)
 }

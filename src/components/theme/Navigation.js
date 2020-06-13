@@ -11,25 +11,28 @@ const Navigation = ( ) => {
           <Link to="/introduction">Instrukcja obsługi.</Link>
         </li>
         <li className="tk-nav-item">
-          <Link to="/lesson/1">Czym są formularze?</Link>
+          <Link to="/lesson/what-are-forms">Czym są formularze?</Link>
         </li>
         <li className="tk-nav-item">
-          <Link to="/lesson/2">Rodzaje kontrolek.</Link>
+          <Link to="/lesson/form-elements">Elementy formularza.</Link>
         </li>
         <li className="tk-nav-item">
-          <Link to="/lesson/3">Jak układać formularze?</Link>
+          <Link to="/lesson/input-types">Rodzaje znacznika input.</Link>
         </li>
         <li className="tk-nav-item">
-          <Link to="/lesson/4">Walidacja formularzy w HTML</Link>
+          <Link to="/lesson/4">Jak układać formularze?</Link>
         </li>
         <li className="tk-nav-item">
-          <Link to="/lesson/5">Walidacja formularzy w JS</Link>
+          <Link to="/lesson/5">Walidacja formularzy w HTML.</Link>
         </li>
         <li className="tk-nav-item">
-          <Link to="/lesson/6">Formularze z Bootstrap</Link>
+          <Link to="/lesson/6">Walidacja formularzy w JS.</Link>
         </li>
         <li className="tk-nav-item">
-          <Link to="/epilogue">Słowo zakończenia</Link>
+          <Link to="/lesson/7">Formularze z Bootstrap.</Link>
+        </li>
+        <li className="tk-nav-item">
+          <Link to="/epilogue">Słowo zakończenia.</Link>
         </li>
       </ul>
     </nav>

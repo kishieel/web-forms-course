@@ -5,8 +5,9 @@ import Footer from './theme/Footer'
 import NotFound from './theme/NotFound'
 import Introduction from './lessons/Introduction'
 import Epilogue from './lessons/Epilogue'
-import FirstLesson from './lessons/FirstLesson'
-import SecondLesson from './lessons/SecondLesson'
+import WhatAreForms from './lessons/WhatAreForms'
+import FormElements from './lessons/FormElements'
+import InputTypes from './lessons/InputTypes'
 import ThirdLesson from './lessons/ThirdLesson'
 import FourthLesson from './lessons/FourthLesson'
 import FifthLesson from './lessons/FifthLesson'
@@ -50,14 +51,14 @@ const App = () => {
                 <Route path="/introduction">
                   <Introduction />
                 </Route>
-                <Route path="/lesson/1">
-                  <FirstLesson />
+                <Route path="/lesson/what-are-forms">
+                  <WhatAreForms />
                 </Route>
-                <Route path="/lesson/2">
-                  <SecondLesson />
+                <Route path="/lesson/form-elements">
+                  <FormElements />
                 </Route>
-                <Route path="/lesson/3">
-                  <ThirdLesson />
+                <Route path="/lesson/input-types">
+                  <InputTypes />
                 </Route>
                 <Route path="/lesson/4">
                   <FourthLesson />
