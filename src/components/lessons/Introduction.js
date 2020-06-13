@@ -5,8 +5,8 @@ const Introduction = () => {
   return (<>
     <article className="uk-card uk-card-default uk-card-body">
       <h3 className="uk-card-title">Instrukcja obsługi</h3>
-      <p></p>
-      <p>Na kolejnych stronach kursu możesz znaleźć okienka takie jak to poniżej - przyjżyj się mu uważnie!</p>
+      <p>Witaj w kursie formularzy HTML! Nie wiem kim jesteś i skąd się tu wziąłeś<span className="tk-pervert"> tzn. wiem, wszyscy przyśliśmy na świat w podobnych okolicznościach, ale to nie istotne</span>, skoro jednak już tu jesteś to zanim zaczniesz korzystać z następnych lekcji chciałbym Ci dać kilka porad odnośnie tego co jest czym i co jak działa, abyś mógł jak najszybciej nauczyć się wszysktkiego co związane jest z formularzami.</p>
+      <p>Oprócz standardowych opisów na kolejnych stronach kursu możesz znaleźć wbodowane elementy prezentujące opisane funkcjonalności oraz okienka takie jak to poniżej - przyjżyj się mu uważnie!</p>
       <iframe
         height="300"
         scrolling="no"
@@ -49,7 +49,7 @@ const Introduction = () => {
       </div>
       <div class="uk-alert-danger" uk-alert="">
         <h3>Alert tolerancyjny.</h3>
-        <p>Czasami zdarza mi się kierować bezpośrednie komunikaty do odbiorcy, które są w formie męskiej, np. "widziałeś". Jeżeli więc jesteś dziewczynka i czuje się z tego powodu dyskryminowana.. to wybacz, ale ze względu na specyfikę języka nie mogę inaczej :3</p>
+        <p>Czasami zdarza mi się kierować bezpośrednie komunikaty do odbiorcy, które są w formie męskiej, np. "będziesz mógł", "widziałeś" itp. Jeżeli więc jesteś dziewczynką i czuje się z tego powodu dyskryminowana.. to wybacz, ale ze względu na specyfikę języka nie mogę inaczej :3</p>
       </div>
       <PageSwitcher nextURL="/lesson/what-are-forms" nextText="Czym są formularze?" />
     </article>
