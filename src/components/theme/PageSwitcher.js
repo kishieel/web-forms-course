@@ -9,7 +9,9 @@ const PageSwitcher = ( props ) => {
 
   if ( previousURL !== undefined && previousText !== undefined ) {
     previousSwitcher = <h5>
-      <Link to={ previousURL } style={{ color: 'inherit' }}>
+      <Link to={ previousURL }
+        style={{ color: 'inherit' }}
+        onClick={ () => window.scrollTo(0, 0) }>
         <span uk-icon="chevron-left"></span>
         { previousText }
       </Link>
@@ -18,7 +20,9 @@ const PageSwitcher = ( props ) => {
 
   if ( nextURL !== undefined && nextText !== undefined ) {
     nextSwitcher = <h5>
-      <Link to={ nextURL } style={{ color: 'inherit' }}>
+      <Link to={ nextURL }
+        style={{ color: 'inherit' }}
+        onClick={ () => window.scrollTo(0, 0) }>
         { nextText }
         <span uk-icon="chevron-right"></span>
       </Link>

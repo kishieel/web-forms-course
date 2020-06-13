@@ -1,9 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PageSwitcher from '../theme/PageSwitcher'
 
 const Introduction = () => {
-  const { exampleAlert, setExampleAlert } = useState( false )
-
   return (<>
     <article className="uk-card uk-card-default uk-card-body">
       <h3 className="uk-card-title">Instrukcja obsługi</h3>
@@ -11,11 +9,12 @@ const Introduction = () => {
       <p>Oprócz standardowych opisów, na kolejnych stronach kursu możesz znaleźć wbodowane elementy prezentujące opisane funkcjonalności oraz okienka takie jak to poniżej - przyjżyj się im uważnie!</p>
       <div className="uk-margin-bottom">
         <div className="uk-text-center uk-margin-bottom">
-          <button class="uk-button uk-button-primary">Element wbudowany - klikaj śmiało!</button>
+          <button
+          class="uk-button uk-button-primary"
+          uk-toggle="target: #exampleAlert">Element wbudowany - klikaj śmiało!</button>
         </div>
-        <div>
-          <div class="uk-alert-primary" uk-alert="">
-            <a class="uk-alert-close" uk-close=""></a>
+        <div id="exampleAlert" hidden={ true }>
+          <div className="uk-alert-primary" uk-alert="">
             <h3>Ucz się, ucz!</h3>
             <p>Wiedza to potęgi klucz, a kto kluczy ma wiele ten zostaje w szkole woźnym.</p>
           </div>
@@ -64,6 +63,7 @@ const Introduction = () => {
       <div class="uk-alert-danger" uk-alert="">
         <h3>Alert tolerancyjny.</h3>
         <p>Czasami zdarza mi się kierować bezpośrednie komunikaty do odbiorcy, które są w formie męskiej, np. "będziesz mógł", "widziałeś" itp. Jeżeli więc jesteś dziewczynką i czuje się z tego powodu dyskryminowana.. to wybacz, ale ze względu na specyfikę języka nie mogę inaczej :3</p>
+        <p className="tk-pervert">Tak naprawdę to mogę, ale byłem słaby z polskiego i nie chce mi się kombinować z formą bezosobową.</p>
       </div>
       <PageSwitcher nextURL="/lesson/what-are-forms" nextText="Czym są formularze?" />
     </article>

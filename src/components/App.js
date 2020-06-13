@@ -19,17 +19,15 @@ import {
 } from "react-router-dom";
 
 const App = () => {
-
   const [ darkMode, setDarkMode ] = useState( localStorage.getItem('darkMode') !== "false" )
 
   const handleDarkModeChange = ( ) => {
-    console.log( darkMode, localStorage.getItem('darkMode') )
     setDarkMode( ! darkMode  )
   }
 
   useEffect(() => {
     localStorage.setItem('darkMode', darkMode);
-  }, [ darkMode ]);
+  }, [ darkMode ])
 
   return (<>
     <Router>
