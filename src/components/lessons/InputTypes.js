@@ -5,7 +5,7 @@ const SecondLesson = ( ) => {
   return (<>
     <article className="uk-card uk-card-default uk-card-body">
       <h3 className="uk-card-title">Rodzaje kontrolek</h3>
-      <p>Jak wspomniałem w poprzednim rozdziale największą siłą formularzy są tak zwane kontrolki, które w języku HTML reprezentują znaczniki <span className="tk-code"> &lt;input&gt;</span>,<span className="tk-code"> &lt;select&gt; </span> i <span className="tk-code"> &lt;textarea&gt; </span>. Może on decydować jakiego typu dane są dopuszczalne i w jaki sposób należy je formatować - w tym celu używa atrybutu <span className="tk-code">type</span>.</p>
+      <p>Jedną z najbardziej rozbudowanych kontrolek formularza jest znacznik <span className="tk-code"> &lt;input&gt;</span>. Może on samodzielnie decydować jakiego typu dane są dopuszczalne i w jaki sposób należy je formatować - w tym celu używa atrybutu <span className="tk-code">type</span>.</p>
       <p>
         Wartości, które przyjmuje ten atrybut możesz znaleźć poniżej:
         <ul className="uk-list uk-list-hyphen">
@@ -126,7 +126,11 @@ const SecondLesson = ( ) => {
             <span className="tk-code">range</span> &ndash; domyślnie pozwala wybrać wartości na skali od 0 do 100.
             <form className="uk-overflow-hidden">
               <label for="weekInput">Jak oceniasz skalę swojego cierpienia<span className="tk-pervert"> - nie.. nie możesz wyjść poza skale</span> ?</label>
-              <input id="rangeInput" className="uk-range uk-align-right uk-margin-remove-bottom" style={{ width: 200, maxWidth: '100%', paddingTop: 10, paddingBottom: 10 }} type="range" />
+              <span className="uk-align-right uk-margin-remove-bottom">
+                0&nbsp;
+                <input id="rangeInput" className="uk-range " style={{ width: 200, maxWidth: '100%', paddingTop: 10, paddingBottom: 10 }} type="range" />
+                &nbsp;100
+              </span>
             </form>
           </li>
           <li>
@@ -223,8 +227,8 @@ const SecondLesson = ( ) => {
         <h3>ZADANIE BOJOWE !!!</h3>
         <p>Korzystając ze zdobytych w tej lekcji informacji spróbuj stworzyć formularz wykorzystujący wszyskie kontrolki, oraz ich atrybuty. Dodatkowe informacje na temat znacznika <span className="tk-code">&lt;input&gt;</span> możesz znaleźć <a className="uk-link" href="https://www.w3schools.com/html/html_form_input_types.asp">tutaj</a>. Bądź kreatywny - powodzenia!</p>
       </div>
-      <PageSwitcher previousURL="/lesson/1" previousText="Czym są formularze?"
-        nextURL="/lesson/3" nextText="Jak układać formularze?"/>
+      <PageSwitcher previousURL="/lesson/form-elements" previousText="Elementy formularza"
+        nextURL="/lesson/xxx" nextText="Jak układać formularze?"/>
     </article>
   </>)
 }

@@ -12,6 +12,7 @@ import ThirdLesson from './lessons/ThirdLesson'
 import FourthLesson from './lessons/FourthLesson'
 import FifthLesson from './lessons/FifthLesson'
 import SixthLesson from './lessons/SixthLesson'
+import DeepHole from './game/DeepHole'
 import {
   BrowserRouter as Router,
   Switch,
@@ -69,6 +70,9 @@ const App = () => {
                 </Route>
                 <Route path="/epilogue">
                   <Epilogue />
+                </Route>
+                <Route path="/game/deep">
+                  <DeepHole />
                 </Route>
                 <Route path="*">
                   <NotFound />
