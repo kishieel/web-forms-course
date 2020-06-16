@@ -9,8 +9,8 @@ const NotFound = ( ) => {
       <p>
         Co robisz ?<br/><br/>
         <Link to="/">Zabierz mnie do normalności..</Link> <br/>
-        <Link to="/deep">Wchodzę w głąb kurliczej nory!</Link><br/>
-        <Link to="/real-deep" style={{ color: 'transparent' }}>Pokaż mi prawdę!</Link>
+        <Link to="/game/deep">Wchodzę w głąb kurliczej nory!</Link><br/>
+        <Link to="/game/real-deep" style={{ color: 'transparent' }}>Pokaż mi prawdę!</Link>
       </p>
     </div>
   </>)

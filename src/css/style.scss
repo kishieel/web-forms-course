@@ -18,7 +18,9 @@ $abc : #222;
 .tk-dark-mode {
   background: #222;
 
-  .tk-input {
+  .tk-input,
+  .uk-input,
+  .uk-select {
     background: lighten(#2e2c2d, 3);
     color: #fff;
     border: 1px solid #ddd;
@@ -110,6 +112,22 @@ $abc : #222;
   &:hover {
     background: $base-code-color;
     color: #fff;
+  }
+}
+
+.tk-example-table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+
+  td {
+    // border: 2px solid #fff;
+    padding: 5px 10px;
+    width: 25%;
+  }
+
+  .tk-input {
+    width: 100%;
   }
 }
 

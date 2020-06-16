@@ -8,10 +8,11 @@ import Epilogue from './lessons/Epilogue'
 import WhatAreForms from './lessons/WhatAreForms'
 import FormElements from './lessons/FormElements'
 import InputTypes from './lessons/InputTypes'
-import ThirdLesson from './lessons/ThirdLesson'
-import FourthLesson from './lessons/FourthLesson'
+import FormDesign from './lessons/FormDesign'
 import FifthLesson from './lessons/FifthLesson'
+import ThirdLesson from './lessons/ThirdLesson'
 import SixthLesson from './lessons/SixthLesson'
+import DeepHole from './game/DeepHole'
 import {
   BrowserRouter as Router,
   Switch,
@@ -58,8 +59,8 @@ const App = () => {
                 <Route path="/lesson/input-types">
                   <InputTypes />
                 </Route>
-                <Route path="/lesson/4">
-                  <FourthLesson />
+                <Route path="/lesson/form-design">
+                  <FormDesign />
                 </Route>
                 <Route path="/lesson/5">
                   <FifthLesson />
@@ -69,6 +70,9 @@ const App = () => {
                 </Route>
                 <Route path="/epilogue">
                   <Epilogue />
+                </Route>
+                <Route path="/game/deep">
+                  <DeepHole />
                 </Route>
                 <Route path="*">
                   <NotFound />

@@ -1,5 +1,6 @@
 import React from 'react'
 import PageSwitcher from '../theme/PageSwitcher'
+import CodePen from '../theme/CodePen'
 
 const Introduction = () => {
   return (<>
@@ -20,20 +21,8 @@ const Introduction = () => {
           </div>
         </div>
       </div>
-      <iframe
-        height="300"
-        scrolling="no"
-        title="web-forms-example-1"
-        src="https://codepen.io/tomaszkisiel/embed/gOPOmXm?height=265&theme-id=dark&default-tab=html,result"
-        frameBorder="no"
-        allowtransparency="true"
-        allowFullScreen={true}
-        style={{ width: '100%' }}>
-        <div style={{ height: 300, boxSizing: 'border-box', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '2px solid', margin: '1em', padding: '1em' }}>
-          See the Pen <a href='https://codepen.io/tomaszkisiel/pen/gOPOmXm'>web-forms-example-1</a> by TomaszKisiel
-          (<a href='https://codepen.io/tomaszkisiel'>@tomaszkisiel</a>) on <a href='https://codepen.io'>CodePen</a>.
-        </div>
-      </iframe>
+      <CodePen url="https://codepen.io/tomaszkisiel/embed/gOPOmXm?height=265&theme-id=dark&default-tab=html,result"
+        title="web-forms-example/what-are-forms" />
       <p>To co właśnie obejrzałeś to jeden z tak zwanych pinów pochodzący ze strony <a href="https://codepen.io/tomaszkisiel">CodePen</a>. Ich użycie umożliwia mi wygodne prezentowanie treści z nowo poznanej lekcji w formie kodu - HTML, CSS i JS oraz tego jak wyglądać będzie to w przeglądarce.</p>
       <p>Jak widzisz, okienko składa się z dwóch widoków i kilku przycisków. Pierwszy z widoków - ten po lewej - to właśnie kod, który chcę Ci zaprezentować, a drugi - ten po prawej - to jego rezultat, który można zobaczyć w przeglądarce po jego uruchomieniu.</p>
       <div>
