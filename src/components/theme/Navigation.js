@@ -20,7 +20,7 @@ const Navigation = ( ) => {
           <Link to="/lesson/input-types">Rodzaje znacznika input.</Link>
         </li>
         <li className="tk-nav-item">
-          <Link to="/lesson/4">Jak układać formularze?</Link>
+          <Link to="/lesson/form-design">Jak układać formularze?</Link>
         </li>
         <li className="tk-nav-item">
           <Link to="/lesson/5">Walidacja formularzy w HTML.</Link>

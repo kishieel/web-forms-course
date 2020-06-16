@@ -1,10 +1,11 @@
 import React from 'react'
 import PageSwitcher from '../theme/PageSwitcher'
+import CodePen from '../theme/CodePen'
 
 const SecondLesson = ( ) => {
   return (<>
     <article className="uk-card uk-card-default uk-card-body">
-      <h3 className="uk-card-title">Rodzaje kontrolek</h3>
+      <h3 className="uk-card-title">Rodzaje znacznika input</h3>
       <p>Jedną z najbardziej rozbudowanych kontrolek formularza jest znacznik <span className="tk-code"> &lt;input&gt;</span>. Może on samodzielnie decydować jakiego typu dane są dopuszczalne i w jaki sposób należy je formatować - w tym celu używa atrybutu <span className="tk-code">type</span>.</p>
       <p>
         Wartości, które przyjmuje ten atrybut możesz znaleźć poniżej:
@@ -209,20 +210,8 @@ const SecondLesson = ( ) => {
       <p>
         Przykładowy formularz wykorzystujący większość z nowo-poznanych kontrolek możesz zobaczyć poniżej. Zachęcam do zabawy i samodzielnego stworzenia dowolnego formularza.
       </p>
-      <iframe
-        height="300"
-        scrolling="no"
-        title="web-forms-lesson-2"
-        src="https://codepen.io/tomaszkisiel/embed/WNrrKqW?height=265&theme-id=dark&default-tab=html,result"
-        frameBorder="no"
-        allowtransparency="true"
-        allowFullScreen={true}
-        style={{ width: '100%' }}>
-        <div style={{ height: 300, boxSizing: 'border-box', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '2px solid', margin: '1em', padding: '1em' }}>
-          See the Pen <a href='https://codepen.io/tomaszkisiel/pen/gOPOmXm'>web-forms-lesson-2</a> by TomaszKisiel
-          (<a href='https://codepen.io/tomaszkisiel'>@tomaszkisiel</a>) on <a href='https://codepen.io'>CodePen</a>.
-        </div>
-      </iframe>
+      <CodePen url="https://codepen.io/tomaszkisiel/embed/WNrrKqW?height=265&theme-id=dark&default-tab=html,result"
+        title="web-forms-example/input-types" />
       <div className="uk-alert-primary" uk-alert="">
         <h3>ZADANIE BOJOWE !!!</h3>
         <p>Korzystając ze zdobytych w tej lekcji informacji spróbuj stworzyć formularz wykorzystujący wszyskie kontrolki, oraz ich atrybuty. Dodatkowe informacje na temat znacznika <span className="tk-code">&lt;input&gt;</span> możesz znaleźć <a className="uk-link" href="https://www.w3schools.com/html/html_form_input_types.asp">tutaj</a>. Bądź kreatywny - powodzenia!</p>

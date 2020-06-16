@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import PageSwitcher from '../theme/PageSwitcher'
+import CodePen from '../theme/CodePen'
 
 const FormElements = ( props ) => {
   return (<>
@@ -43,17 +44,9 @@ const FormElements = ( props ) => {
       <div className="uk-text-center">
         <textarea className="tk-input" style={{ width: '90%', maxWidth: '100%', minWidth: '50%', minHeight: 60 }} rows={ 5 } placeholder="Możesz tu opisać co ciekawego Cię dziś spotkało.."></textarea>
       </div>
-      <iframe height="300"
-        scrolling="no"
-        title="web-forms-course/form-elements"
-        src="https://codepen.io/tomaszkisiel/embed/jOWrZjw?height=265&theme-id=dark&default-tab=html,result"
-        frameBorder="no"
-        allowtransparency="true"
-        allowFullScreen={true}
-        style={{ width: '100%' }}>
-        See the Pen <a href='https://codepen.io/tomaszkisiel/pen/jOWrZjw'>web-forms-course/form-elements</a> by TomaszKisiel
-        (<a href='https://codepen.io/tomaszkisiel'>@tomaszkisiel</a>) on <a href='https://codepen.io'>CodePen</a>.
-      </iframe>
+      <br/>
+      <CodePen url="https://codepen.io/tomaszkisiel/embed/jOWrZjw?height=265&theme-id=dark&default-tab=html,result"
+        title="web-forms-example/form-elements" />
       <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
       <PageSwitcher previousURL="/lesson/what-are-forms" previousText="Czym są formularze?"
         nextURL="/lesson/input-types" nextText="Rodzaje znacznika input" />
