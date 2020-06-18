@@ -217,7 +217,7 @@ const SecondLesson = ( ) => {
         <p>Korzystając ze zdobytych w tej lekcji informacji spróbuj stworzyć formularz wykorzystujący wszyskie kontrolki, oraz ich atrybuty. Dodatkowe informacje na temat znacznika <span className="tk-code">&lt;input&gt;</span> możesz znaleźć <a className="uk-link" href="https://www.w3schools.com/html/html_form_input_types.asp">tutaj</a>. Bądź kreatywny - powodzenia!</p>
       </div>
       <PageSwitcher previousURL="/lesson/form-elements" previousText="Elementy formularza"
-        nextURL="/lesson/xxx" nextText="Jak układać formularze?"/>
+        nextURL="/lesson/form-design" nextText="Jak układać formularze?"/>
     </article>
   </>)
 }

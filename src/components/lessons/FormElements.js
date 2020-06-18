@@ -47,7 +47,10 @@ const FormElements = ( props ) => {
       <br/>
       <CodePen url="https://codepen.io/tomaszkisiel/embed/jOWrZjw?height=265&theme-id=dark&default-tab=html,result"
         title="web-forms-example/form-elements" />
-      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+      <div className="uk-alert-primary" uk-alert="">
+        <h3>ZADANIE BOJOWE !!!</h3>
+        <p>Korzystając ze zdobytych w tej lekcji informacji spróbuj stworzyć formularz wykorzystujący wszyskie kontrolki, oraz ich atrybuty. Dodatkowe informacje na temat znacznika <span className="tk-code">&lt;input&gt;</span> możesz znaleźć <a className="uk-link" href="https://www.w3schools.com/html/html_form_input_types.asp">tutaj</a>. Bądź kreatywny - powodzenia!</p>
+      </div>
       <PageSwitcher previousURL="/lesson/what-are-forms" previousText="Czym są formularze?"
         nextURL="/lesson/input-types" nextText="Rodzaje znacznika input" />
     </article>

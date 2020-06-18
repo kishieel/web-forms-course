@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import { selectLanguageText } from '../../lang'
 
 const Navigation = ( ) => {
   return (<>
@@ -23,10 +22,10 @@ const Navigation = ( ) => {
           <Link to="/lesson/form-design">Jak układać formularze?</Link>
         </li>
         <li className="tk-nav-item">
-          <Link to="/lesson/5">Walidacja formularzy w HTML.</Link>
+          <Link to="/lesson/form-validation-html">Walidacja formularzy w HTML.</Link>
         </li>
         <li className="tk-nav-item">
-          <Link to="/lesson/6">Walidacja formularzy w JS.</Link>
+          <Link to="/lesson/form-validation-js">Walidacja formularzy w JS.</Link>
         </li>
         <li className="tk-nav-item">
           <Link to="/lesson/7">Formularze z Bootstrap.</Link>

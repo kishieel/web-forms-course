@@ -61,6 +61,10 @@ const FormDesign = ( ) => {
       <p><span className="tk-code">CSS Grid</span> &ndash; to sposób układania treści zdefiniowany w CSS, dzięki któremu możemy stworzyć siatkę i wyrównać elementy HTML do ustawionych kolumn i wierszy. Zdecydowaną przewagą tego rozwiązania nad tabelką jest to jak łatwo można go dostosować do wymiarów urządzenia, na którym otwierana jest nasza strona. Jeśli chcesz zobaczyć o co mi chodzi zamknij kartę <span className="tk-code">HTML</span> w poniższym pinie i zobacz jak zmienia się wygląd formularza opartego na grid'dzie w zależności od szerokości karty. <span className="tk-pervert">Jeśli domyślasz się, że mówię tu o RWD to brawo - sprytna z Ciebie bestia :3</span></p>
       <p>Wykonanie czegoś takiego wymaga trochę wiedzy i sprytu, ale aby umilić Ci naukę grid'a polecam zagrać w tą <a href="https://cssgridgarden.com">grę</a> i pobuszować trochę w <a href="https://developer.mozilla.org/pl/docs/Web/CSS/CSS_Grid_Layout">dokumentacjach</a>.</p>
       <CodePen url="https://codepen.io/tomaszkisiel/embed/vYLXwXr?theme-id=dark&default-tab=html,result" title="web-forms-course/form-design" height={ 600 }/>
+      <div className="uk-alert-primary" uk-alert="">
+        <h3>ZADANIE BOJOWE !!!</h3>
+        <p>Wybierz jedną z opcji, które tu podałem lub wymyśl własną i stwórz formularz, który będzie zbierał dane niezbędne poczcie polskiej do wysłania twojej paczki - przyda się do następnych lekcji :3</p>
+      </div>
       <PageSwitcher previousURL="/lesson/input-types" previousText="Rodzaje znacznika input"
         nextURL="/lesson/form-validation-html" nextText="Walidacja formularzy w HTML" />
     </article>
