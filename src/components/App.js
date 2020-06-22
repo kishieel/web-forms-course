@@ -33,7 +33,7 @@ const App = () => {
     <Router>
       <div className={ darkMode === true ? 'tk-dark-mode' : '' }
         style={{ paddingTop: 30, paddingBottom: 30, minHeight: '100vh', boxSizing: "border-box" }}>
-        <div className="uk-container">
+        <div className="uk-container tk-container">
           <div className="uk-grid uk-grid-match">
             <div className="uk-width-1-1@m uk-margin-bottom">
               <Header handleDarkModeChange={ handleDarkModeChange } />

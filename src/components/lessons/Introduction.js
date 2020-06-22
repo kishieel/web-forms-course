@@ -4,7 +4,7 @@ import CodePen from '../theme/CodePen'
 
 const Introduction = () => {
   return (<>
-    <article className="uk-card uk-card-default uk-card-body">
+    <article id="content" className="uk-card uk-card-default uk-card-body">
       <h3 className="uk-card-title">Instrukcja obsługi</h3>
       <p>Witaj w kursie formularzy HTML! Nie wiem kim jesteś i skąd się tu wziąłeś<span className="tk-pervert"> tzn. wiem, wszyscy przyśliśmy na świat w podobnych okolicznościach, ale to nie istotne</span>, skoro jednak już tu jesteś to zanim zaczniesz korzystać z następnych lekcji chciałbym Ci dać kilka porad odnośnie tego co jest czym i co jak działa, abyś mógł jak najszybciej nauczyć się wszysktkiego co związane jest z formularzami.</p>
       <p>Oprócz standardowych opisów, na kolejnych stronach kursu możesz znaleźć wbodowane elementy prezentujące opisane funkcjonalności oraz okienka takie jak to poniżej - przyjżyj się im uważnie!</p>
@@ -21,7 +21,7 @@ const Introduction = () => {
           </div>
         </div>
       </div>
-      <CodePen url="https://codepen.io/tomaszkisiel/embed/gOPOmXm?height=265&theme-id=dark&default-tab=html,result"
+      <CodePen pen="gOPOmXm"
         title="web-forms-example/what-are-forms" />
       <p>To co właśnie obejrzałeś to jeden z tak zwanych pinów pochodzący ze strony <a href="https://codepen.io/tomaszkisiel">CodePen</a>. Ich użycie umożliwia mi wygodne prezentowanie treści z nowo poznanej lekcji w formie kodu - HTML, CSS i JS oraz tego jak wyglądać będzie to w przeglądarce.</p>
       <p>Jak widzisz, okienko składa się z dwóch widoków i kilku przycisków. Pierwszy z widoków - ten po lewej - to właśnie kod, który chcę Ci zaprezentować, a drugi - ten po prawej - to jego rezultat, który można zobaczyć w przeglądarce po jego uruchomieniu.</p>

@@ -5,7 +5,7 @@ import CodePen from '../theme/CodePen'
 
 const FormElements = ( props ) => {
   return (<>
-    <article className="uk-card uk-card-default uk-card-body">
+    <article id="content" className="uk-card uk-card-default uk-card-body">
       <h3 className="uk-card-title">Elementy formularza</h3>
       <p>Jak wspomniałem w poprzednim rozdziale największą siłą formularzy są tak zwane kontrolki, które umożliwiają odbieranie danych od użytkownika. Najciekawszymi z nich są w zasadzie trzy, które opisałem poniżej. Jeżeli jednak jesteś bardzo dociekliwy i chciałbyś poznać resztę znaczników związanych z formularzami, to zachęcam to sprawdzenia tego <a href="https://www.w3schools.com/html/html_form_elements.asp">linku</a>.</p>
       <p><span className="tk-code">&lt;input&gt;</span> &ndash; to najpopualrniejsza i dostarczająca najwięcej możliwości kontrolka. W najprostszym przypadku jest zwykłym polem tekstowym, jednak dzięki swojemu atrybutowi<span className="tk-code"> type </span> może przyjmować dane w wielu różnych formatach. Informacji o tym zanczniku jest na tyle dużo, że poświęciłem mu w całości osobną <Link to="/lesson/input-types">lekcję</Link>. <span className="tk-pervert">Jeżeli jesteś niecierpliwy to możesz ją sprawdzić już teraz :D</span></p>
@@ -45,7 +45,7 @@ const FormElements = ( props ) => {
         <textarea className="tk-input" style={{ width: '90%', maxWidth: '100%', minWidth: '50%', minHeight: 60 }} rows={ 5 } placeholder="Możesz tu opisać co ciekawego Cię dziś spotkało.."></textarea>
       </div>
       <br/>
-      <CodePen url="https://codepen.io/tomaszkisiel/embed/jOWrZjw?height=265&theme-id=dark&default-tab=html,result"
+      <CodePen pen="jOWrZjw"
         title="web-forms-example/form-elements" />
       <div className="uk-alert-primary" uk-alert="">
         <h3>ZADANIE BOJOWE !!!</h3>
