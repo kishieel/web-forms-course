@@ -12,7 +12,6 @@ const DeepHole = ( ) => {
   return (<>
     <article className="uk-card uk-card-default uk-card-body">
       <p className="uk-text-center">{ carrots }</p>
-      <p className="uk-text-center"><Link to="">Zabierz mnie stąd!</Link></p>
     </article>
   </>)
 }

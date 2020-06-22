@@ -13,7 +13,11 @@
     color: $global-primary-background;
   }
 }
-$abc : #222;
+
+.uk-table th {
+  color: inherit;
+  font-weight: bold;
+}
 
 .tk-dark-mode {
   background: #222;
@@ -128,6 +132,16 @@ $abc : #222;
 
   .tk-input {
     width: 100%;
+  }
+}
+
+@media (max-width: 959px) {
+  .tk-table-responsive-header {
+    text-align: center !important;
+  }
+
+  .tk-container {
+    padding: 0;
   }
 }
 

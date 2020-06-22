@@ -4,7 +4,7 @@ import CodePen from '../theme/CodePen'
 
 const SecondLesson = ( ) => {
   return (<>
-    <article className="uk-card uk-card-default uk-card-body">
+    <article id="content" className="uk-card uk-card-default uk-card-body">
       <h3 className="uk-card-title">Rodzaje znacznika input</h3>
       <p>Jedną z najbardziej rozbudowanych kontrolek formularza jest znacznik <span className="tk-code"> &lt;input&gt;</span>. Może on samodzielnie decydować jakiego typu dane są dopuszczalne i w jaki sposób należy je formatować - w tym celu używa atrybutu <span className="tk-code">type</span>.</p>
       <p>
@@ -210,14 +210,15 @@ const SecondLesson = ( ) => {
       <p>
         Przykładowy formularz wykorzystujący większość z nowo-poznanych kontrolek możesz zobaczyć poniżej. Zachęcam do zabawy i samodzielnego stworzenia dowolnego formularza.
       </p>
-      <CodePen url="https://codepen.io/tomaszkisiel/embed/WNrrKqW?height=265&theme-id=dark&default-tab=html,result"
-        title="web-forms-example/input-types" />
+      <CodePen pen="WNrrKqW"
+        title="web-forms-example/input-types"
+        height={450} />
       <div className="uk-alert-primary" uk-alert="">
         <h3>ZADANIE BOJOWE !!!</h3>
         <p>Korzystając ze zdobytych w tej lekcji informacji spróbuj stworzyć formularz wykorzystujący wszyskie kontrolki, oraz ich atrybuty. Dodatkowe informacje na temat znacznika <span className="tk-code">&lt;input&gt;</span> możesz znaleźć <a className="uk-link" href="https://www.w3schools.com/html/html_form_input_types.asp">tutaj</a>. Bądź kreatywny - powodzenia!</p>
       </div>
       <PageSwitcher previousURL="/lesson/form-elements" previousText="Elementy formularza"
-        nextURL="/lesson/xxx" nextText="Jak układać formularze?"/>
+        nextURL="/lesson/form-design" nextText="Jak układać formularze?"/>
     </article>
   </>)
 }

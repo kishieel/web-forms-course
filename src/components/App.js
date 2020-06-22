@@ -9,9 +9,8 @@ import WhatAreForms from './lessons/WhatAreForms'
 import FormElements from './lessons/FormElements'
 import InputTypes from './lessons/InputTypes'
 import FormDesign from './lessons/FormDesign'
-import FifthLesson from './lessons/FifthLesson'
-import ThirdLesson from './lessons/ThirdLesson'
-import SixthLesson from './lessons/SixthLesson'
+import FormValidationHtml from './lessons/FormValidationHtml'
+import FormValidationJs from './lessons/FormValidationJs'
 import DeepHole from './game/DeepHole'
 import {
   BrowserRouter as Router,
@@ -34,7 +33,7 @@ const App = () => {
     <Router>
       <div className={ darkMode === true ? 'tk-dark-mode' : '' }
         style={{ paddingTop: 30, paddingBottom: 30, minHeight: '100vh', boxSizing: "border-box" }}>
-        <div className="uk-container">
+        <div className="uk-container tk-container">
           <div className="uk-grid uk-grid-match">
             <div className="uk-width-1-1@m uk-margin-bottom">
               <Header handleDarkModeChange={ handleDarkModeChange } />
@@ -62,11 +61,11 @@ const App = () => {
                 <Route path="/lesson/form-design">
                   <FormDesign />
                 </Route>
-                <Route path="/lesson/5">
-                  <FifthLesson />
+                <Route path="/lesson/form-validation-html">
+                  <FormValidationHtml />
                 </Route>
-                <Route path="/lesson/6">
-                  <SixthLesson />
+                <Route path="/lesson/form-validation-js">
+                  <FormValidationJs />
                 </Route>
                 <Route path="/epilogue">
                   <Epilogue />
