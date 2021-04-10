@@ -15,3 +15,7 @@ Finally start project by:
 ``` bash
 npm start
 ```
+
+## Visit without build
+Find more about this project on my website
+[course.tkisiel.pl](http://course.tkisiel.pl)
